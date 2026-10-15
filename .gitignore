@@ -1,0 +1,34 @@
+
+# Python cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+env/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+
+# Dataset and generated data
+WeedyRice-RGBMS-DB*/
+data/
+datasets/
+outputs/
+runs/
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+
+
+# Large experimental checkpoints
+/models/best_model.pth
+
+# Keep the smaller NIR checkpoint available for versioning
+!/models/finetuned_epoch40.pth

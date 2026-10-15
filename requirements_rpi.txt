@@ -1,0 +1,5 @@
+onnxruntime>=1.16.0
+numpy>=1.24.0
+Pillow>=9.0.0
+tifffile>=2023.1.1
+# opencv-python-headless>=4.8.0  # only needed for --camera mode
