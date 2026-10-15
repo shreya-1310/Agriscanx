@@ -50,3 +50,39 @@ A verified end-to-end inference command for the corrected four-band pipeline has
 Research prototype. Model checkpoint loading and tensor inference have been tested, and the corrected dataset loader has passed a sample test.
 
 Raspberry Pi deployment and scientifically validated crop-health predictions remain future work.
+
+
+
+
+## Download the Experimental CBAM Model
+
+The trained CBAM checkpoint (`best_model.pth`) is distributed
+separately because it exceeds GitHub's regular Git file-size limit.
+
+1. Open the [v0.1.0 release](https://github.com/shreya-1310/Agriscanx/releases/tag/v0.1.0).
+2. Download `best_model.pth` from Assets.
+3. Place it inside the `models/` folder.
+
+Expected location:
+
+    models/best_model.pth
+
+### Test the Model
+
+Install the necessary Python dependencies, including PyTorch,
+NumPy and Pillow, in a compatible Python environment.
+
+Run:
+
+    python test_model.py --checkpoint models/best_model.pth
+
+### Run RGB Image Inference
+
+    python predict.py --image path/to/image.jpg --checkpoint models/best_model.pth
+
+Predictions are saved in `outputs/prediction/`.
+
+The four output channels are experimental and must not be
+interpreted as validated spectral measurements or used to
+calculate scientifically reliable NDVI.
+
